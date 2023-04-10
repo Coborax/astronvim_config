@@ -1,6 +1,3 @@
--- TODO: Test test test
-
-
 return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
@@ -17,5 +14,9 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
     event = "User AstroFile",
+  },
+  {
+    "github/copilot.vim",
+    event = "UIEnter",
   }
 }
