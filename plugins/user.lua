@@ -18,5 +18,10 @@ return {
   {
     "github/copilot.vim",
     event = "UIEnter",
+  },
+  {
+    "Shatur/neovim-tasks",
+    opts = {},
+    event = "UIEnter",
   }
 }
