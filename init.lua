@@ -45,6 +45,9 @@ return {
       --   return true
       -- end
     },
+    setup_handlers= {
+      clangd = function (_, opts) require("clangd_extensions").setup { server = opts } end
+    },
     config = {
       clangd = {
         capabilities = {
@@ -56,6 +59,16 @@ return {
     servers = {
       -- "pyright"
     },
+  },
+  -- Configure clangd_extensions
+  plugins = {
+    "p00f/clangd_extensions.nvim",
+    {
+      "williamboman/mason-lspconfig.nvim",
+      opts = {
+        ensure_installed = { "clangd" },
+      }
+    }
   },
   -- Configure require("lazy").setup() options
   lazy = {
