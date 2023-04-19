@@ -7,10 +7,6 @@ return {
     event = "User AstroFile",
   },
   {
-    "github/copilot.vim",
-    event = "UIEnter",
-  },
-  {
     "Shatur/neovim-tasks",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
@@ -21,7 +17,7 @@ return {
           build_type = 'Debug', -- Build type, can be changed using `:Task set_module_param cmake build_type`.
           dap_name = 'lldb', -- DAP configuration name from `require('dap').configurations`. If there is no such configuration, a new one with this name as `type` will be created.
           args = { -- Task default arguments.
-            configure = { '-D', 'CMAKE_EXPORT_COMPILE_COMMANDS=1', '-G', 'Ninja' },
+            configure = { '-D', 'CMAKE_EXPORT_COMPILE_COMMANDS=1', '-G', 'Xcode' },
           },
         }
       }

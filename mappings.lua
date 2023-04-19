@@ -20,6 +20,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["C-S-k"] = { function () require("smart-splits").resize_up() end, desc = "Resize split up" },
+    ["C-S-j"] = { function () require("smart-splits").resize_down() end, desc = "Resize split down" },
+    ["C-S-l"] = { function () require("smart-splits").resize_right() end, desc = "Resize split right" },
+    ["C-S-h"] = { function () require("smart-splits").resize_left() end, desc = "Resize split left" },
   },
   t = {
     -- setting a mapping to false will disable it
