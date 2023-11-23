@@ -4,5 +4,6 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.completion.copilot-lua-cmp"},
 }

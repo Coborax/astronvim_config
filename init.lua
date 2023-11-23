@@ -90,28 +90,20 @@ return {
     setup_handlers = {
       clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end
     },
-    config = {
-      clangd = {
-        capabilities = {
-          offsetEncoding = "utf-8",
-        },
-      },
-    },
+    -- config = {
+    --   clangd = {
+    --     capabilities = {
+    --       offsetEncoding = "utf-8",
+    --     },
+    --   },
+    -- },
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
     },
   },
   -- Configure clangd_extensions
-  plugins = {
-    "p00f/clangd_extensions.nvim",
-    {
-      "williamboman/mason-lspconfig.nvim",
-      opts = {
-        ensure_installed = { "clangd" },
-      }
-    }
-  },
+  -- plugins = {},
   -- Configure require("lazy").setup() options
   lazy = {
     defaults = { lazy = true },
